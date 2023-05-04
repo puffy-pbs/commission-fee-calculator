@@ -13,7 +13,7 @@ ini_set('auto_detect_line_endings',true);
 try {
     // Start transaction processing
     $operationProcessor = new OperationProcessor(
-        new CSVFileReader($argv[1]),
+        new CSVFileReader($argv[1] ?? ''),
         new OperationInfoParser()
     );
 } catch (Exception $e) {
